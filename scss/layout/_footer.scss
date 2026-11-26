@@ -1,0 +1,9 @@
+@use "../utilities/variables" as v;
+
+footer{
+    background-color: v.$color-secundario;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}

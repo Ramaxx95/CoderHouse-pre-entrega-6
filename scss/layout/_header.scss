@@ -1,0 +1,23 @@
+@use "../utilities/variables" as v;
+
+.imagen-logo{
+    width: 5rem;
+    height: 5rem;
+}
+
+.nav-link{
+    color: v.$color-acento;
+}
+
+.nav-link:hover{
+    color: v.$color-hover;
+}
+
+.navbar-nav .nav-link.active{
+    color: v.$color-acento;
+    text-decoration: underline;
+}
+
+.navbar{
+    background-color: v.$color-secundario;
+}
