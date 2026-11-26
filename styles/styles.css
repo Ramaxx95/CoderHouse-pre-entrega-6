@@ -1,3 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Ultra&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
 
+body {
+  font-family: DynaPuff, sans-serif;
+  background-color: rgba(245, 245, 112, 0.8784313725);
+  font-weight: 100;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: Ultra, sans-serif;
+  font-weight: 200;
+}
+body h1 {
+  font-size: 2.5rem;
+}
+body h2 {
+  font-size: 2rem;
+  grid-area: h2;
+}
+body h3 {
+  font-size: 1.5rem;
+}
+body p {
+  font-size: 1rem;
+}
+body ul {
+  grid-area: ul;
+}
+body main {
+  padding: 20px;
+}
+body main section {
+  padding: 20px;
+}
+body main section figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,43 @@
+@use "../utilities/variables" as v;
+
+body{
+    font-family: v.$fuente-parrafo;
+    background-color: v.$color-fondo;
+    font-weight: 100;
+
+    h1, h2, h3, h4, h5, h6{
+        font-family: v.$fuente-titulo;
+        font-weight: 200;
+    }
+
+    h1{font-size: 2.5rem;}
+
+    h2{
+        font-size: 2rem;
+        grid-area: h2;
+    }
+
+    h3{font-size: 1.5rem;}
+
+    p{font-size: 1rem;}
+
+    ul{grid-area: ul;}
+
+    main{
+        padding: 20px;
+
+        section{
+            padding: 20px;
+
+            figure{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem;
+            }
+        }
+    }
+}
+
