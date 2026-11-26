@@ -1,0 +1,21 @@
+@use "../utilities/variables" as v;
+
+.accordion-button{
+    background-color: v.$color-secundario;
+
+    &:not(.collapsed){
+        background-color: v.$color-secundario;
+        box-shadow: inset 0 0.25rem 0 v.$color-fondo; 
+    }
+
+    &:focus{border-color: v.$color-acento;}
+}
+
+.accordion-item{
+    border-color: v.$color-fondo;
+    border-width: 0.25rem;
+}
+
+.accordion-body{
+    background-color: v.$color-secundario-oscuro;
+}

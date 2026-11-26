@@ -1,0 +1,31 @@
+.carousel.slide{
+    grid-area: carousel;
+
+    p{
+        text-align: center;
+        padding: 1rem 0rem 0rem;
+    }
+}
+
+.grid-pag-principal{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "h2"
+        "ul"
+        "carousel";
+}
+
+@media (min-width: 768px){
+    .grid-pag-principal{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+            "h2 carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel";
+    }
+}

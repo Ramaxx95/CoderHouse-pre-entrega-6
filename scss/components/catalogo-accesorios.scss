@@ -1,0 +1,71 @@
+@use "../utilities/variables" as v;
+
+.imagen-producto{
+    padding: 1rem;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$color-secundario;
+    border-radius: 6px;
+
+    h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 5px 5px 20px v.$color-acento;
+    }
+}
+
+@media (min-width: 768px){
+    .contenedor-productos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "producto1 producto2";
+        gap: 1rem;
+    }
+
+    .producto-1{
+        grid-area: producto1;
+    }
+
+    .producto-2{
+        grid-area: producto2;
+    }
+}
+
+@media (min-width: 1024px){
+    .contenedor-productos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "producto1 producto2";
+        gap: 1rem;
+    }
+
+    .producto-1{
+        grid-area: producto1;
+    }
+
+    .producto-2{
+        grid-area: producto2;
+    }
+}

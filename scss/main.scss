@@ -4,3 +4,8 @@
 
 @use "./layout/header";
 @use "./layout/footer";
+
+@use "./components/pag-principal.scss";
+@use "./components/catalogo-accesorios.scss";
+@use "./components/contacto.scss";
+@use "./components/faq.scss";
