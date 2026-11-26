@@ -108,13 +108,17 @@ figure{
         "carousel";
 }
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
     .grid-pag-principal{
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         grid-template-areas: 
-            "h2 h2 "
-            "ul ul"
-            "carousel carousel";
+            "h2 carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel";
     }
 }
 
