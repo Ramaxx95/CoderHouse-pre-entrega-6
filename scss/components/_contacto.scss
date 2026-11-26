@@ -1,0 +1,36 @@
+@use "../utilities/mixins" as m;
+
+.enfasis{
+    font-weight: 700;
+}
+
+.imagen-decoracion{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-contacto{
+    @extend %grid-mobile;
+    grid-template-areas: 
+        "ul"
+        "figure";
+}
+
+@media (min-width: 1024px){
+    .imagen-decoracion{
+        width: 75%;
+        height: 75%;
+    }
+
+    .grid-contacto{
+        @include m.grid(2, 1fr);
+        grid-template-areas: 
+            "ul ul"
+            "figure figure";
+
+        ul{padding: 1rem;}
+
+        li{padding: 0.5rem 0rem;}
+    }
+}

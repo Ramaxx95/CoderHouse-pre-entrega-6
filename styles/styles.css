@@ -1,3 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Ultra&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
 
+body {
+  font-family: DynaPuff, sans-serif;
+  background-color: rgba(245, 245, 112, 0.8784313725);
+  font-weight: 100;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: Ultra, sans-serif;
+  font-weight: 200;
+}
+body h1 {
+  font-size: 2.5rem;
+}
+body h2 {
+  font-size: 2rem;
+  grid-area: h2;
+}
+body h3 {
+  font-size: 1.5rem;
+}
+body p {
+  font-size: 1rem;
+}
+body ul {
+  grid-area: ul;
+}
+body main {
+  padding: 20px;
+}
+body main section {
+  padding: 20px;
+}
+body main section figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.imagen-logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.nav-link {
+  color: rgba(0, 103, 129, 0.9843137255);
+}
+
+.nav-link:hover {
+  color: rgba(42, 166, 197, 0.9843137255);
+}
+
+.navbar-nav .nav-link.active {
+  color: rgba(0, 103, 129, 0.9843137255);
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: rgba(245, 198, 110, 0.8784313725);
+}
+
+.grid-contacto, .contenedor-productos, .grid-pag-principal {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.producto, .producto h3, .producto p, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: rgba(245, 198, 110, 0.8784313725);
+  padding: 5px;
+}
+
+.carousel.slide {
+  grid-area: carousel;
+}
+.carousel.slide p {
+  text-align: center;
+  padding: 1rem 0rem 0rem;
+}
+
+.grid-pag-principal {
+  grid-template-areas: "h2" "ul" "carousel";
+}
+
+@media (min-width: 768px) {
+  .grid-pag-principal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "h2 carousel" "ul carousel" "ul carousel" "ul carousel" "ul carousel" "ul carousel";
+  }
+}
+.imagen-producto {
+  padding: 1rem;
+}
+
+.contenedor-productos {
+  gap: 1rem;
+}
+
+.producto {
+  flex-direction: column;
+  background-color: rgba(245, 198, 110, 0.8784313725);
+  border-radius: 6px;
+}
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 20px rgba(0, 103, 129, 0.9843137255);
+}
+
+@media (min-width: 768px) {
+  .contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "producto1 producto2";
+    gap: 1rem;
+  }
+  .producto-1 {
+    grid-area: producto1;
+  }
+  .producto-2 {
+    grid-area: producto2;
+  }
+}
+@media (min-width: 1024px) {
+  .contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "producto1 producto2";
+    gap: 1rem;
+  }
+  .producto-1 {
+    grid-area: producto1;
+  }
+  .producto-2 {
+    grid-area: producto2;
+  }
+}
+.enfasis {
+  font-weight: 700;
+}
+
+.imagen-decoracion {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-contacto {
+  grid-template-areas: "ul" "figure";
+}
+
+@media (min-width: 1024px) {
+  .imagen-decoracion {
+    width: 75%;
+    height: 75%;
+  }
+  .grid-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "ul ul" "figure figure";
+  }
+  .grid-contacto ul {
+    padding: 1rem;
+  }
+  .grid-contacto li {
+    padding: 0.5rem 0rem;
+  }
+}
+.accordion-button {
+  background-color: rgba(245, 198, 110, 0.8784313725);
+}
+.accordion-button:not(.collapsed) {
+  background-color: rgba(245, 198, 110, 0.8784313725);
+  box-shadow: inset 0 0.25rem 0 rgba(245, 245, 112, 0.8784313725);
+}
+.accordion-button:focus {
+  border-color: rgba(0, 103, 129, 0.9843137255);
+}
+
+.accordion-item {
+  border-color: rgba(245, 245, 112, 0.8784313725);
+  border-width: 0.25rem;
+}
+
+.accordion-body {
+  background-color: rgba(207, 166, 90, 0.8784313725);
+}
 
 /*# sourceMappingURL=styles.css.map */

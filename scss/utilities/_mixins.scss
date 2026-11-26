@@ -1,0 +1,15 @@
+%grid-mobile{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid($column-cnt, $column-size){
+    display: grid;
+    grid-template-columns: repeat($column-cnt, $column-size);
+}

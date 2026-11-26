@@ -1,0 +1,32 @@
+@use "../utilities/mixins" as m;
+
+.carousel.slide{
+    grid-area: carousel;
+
+    p{
+        text-align: center;
+        padding: 1rem 0rem 0rem;
+    }
+}
+
+.grid-pag-principal{
+    @extend %grid-mobile;
+    grid-template-areas: 
+        "h2"
+        "ul"
+        "carousel";
+}
+
+@media (min-width: 768px){
+    .grid-pag-principal{
+        @include m.grid(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+            "h2 carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel"
+            "ul carousel";
+    }
+}
