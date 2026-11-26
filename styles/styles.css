@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Ultra&display=swap');
+
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* DECLARACION DE VARIABLES */
+:root{
+    --color-fondo: #f5f570e0;
+    --color-secundario: #f5c66ee0;
+    --color-secundario-oscuro: #cfa65ae0;
+    --color-acento: #006781fb;
+    --color-hover: #2aa6c5fb;
+}
+
+/* HEADER */
+.imagen-logo{
+    width: 5rem;
+    height: 5rem;
+}
+
+.nav-link{
+    color: var(--color-acento);
+}
+
+.nav-link:hover{
+    color: var(--color-hover);
+}
+
+.navbar-nav .nav-link.active{
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+.navbar{
+    background-color: var(--color-secundario);
+}
+
+/* PÁGINA PRINCIPAL */
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Ultra, sans-serif;
+    font-weight: 200;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+    grid-area: h2;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+main{
+    padding: 20px;
+}
+
+ul{
+    grid-area: ul;
+}
+
+body{
+    font-family: DynaPuff, sans-serif;
+    background-color: var(--color-fondo);
+    font-weight: 100;
+}
+
+section{
+    padding: 20px;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.carousel.slide{
+    grid-area: carousel;
+}
+
+.carousel.slide p{
+    text-align: center;
+    padding: 1rem 0rem 0rem;
+}
+
+.grid-pag-principal{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "h2"
+        "ul"
+        "carousel";
+}
+
+@media (min-width: 1024px){
+    .grid-pag-principal{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "h2 h2 "
+            "ul ul"
+            "carousel carousel";
+    }
+}
+
+/* CATÁLOGO/ACCESORIOS */
+.imagen-producto{
+    padding: 1rem;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secundario);
+    border-radius: 6px;
+}
+
+.producto h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto:hover{
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px var(--color-acento);
+}
+
+@media (min-width: 768px){
+    .contenedor-productos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "producto1 producto2";
+        gap: 1rem;
+    }
+
+    .producto-1{
+        grid-area: producto1;
+    }
+
+    .producto-2{
+        grid-area: producto2;
+    }
+}
+
+@media (min-width: 1024px){
+    .contenedor-productos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "producto1 producto2";
+        gap: 1rem;
+    }
+
+    .producto-1{
+        grid-area: producto1;
+    }
+
+    .producto-2{
+        grid-area: producto2;
+    }
+}
+
+/* FAQ */
+.accordion-button{
+    background-color: var(--color-secundario);
+}
+
+.accordion-item{
+    border-color: var(--color-fondo);
+    border-width: 0.25rem;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: var(--color-secundario);
+    box-shadow: inset 0 0.25rem 0 var(--color-fondo); 
+}
+
+.accordion-button:focus{
+    border-color: var(--color-acento);
+}
+
+.accordion-body{
+    background-color: var(--color-secundario-oscuro);
+}
+
+/* CONTACTO */
+.enfasis{
+    font-weight: 700;
+}
+
+.imagen-decoracion{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "ul"
+        "figure";
+}
+
+@media (min-width: 1024px){
+    .imagen-decoracion{
+        width: 75%;
+        height: 75%;
+    }
+
+    .grid-contacto{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "ul ul"
+            "figure figure";
+    }
+
+    .grid-contacto ul{
+        padding: 1rem;
+    }
+
+    .grid-contacto li{
+        padding: 0.5rem 0rem;
+    }
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
