@@ -1,3 +1,5 @@
+@use "../utilities/mixins" as m;
+
 .enfasis{
     font-weight: 700;
 }
@@ -9,8 +11,7 @@
 }
 
 .grid-contacto{
-    display: grid;
-    grid-template-columns: 1fr;
+    @extend %grid-mobile;
     grid-template-areas: 
         "ul"
         "figure";
@@ -23,8 +24,7 @@
     }
 
     .grid-contacto{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        @include m.grid(2, 1fr);
         grid-template-areas: 
             "ul ul"
             "figure figure";

@@ -1,34 +1,24 @@
 @use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
 
 .imagen-producto{
     padding: 1rem;
 }
 
 .contenedor-productos{
-    display: grid;
-    grid-template-columns: 1fr;
+    @extend %grid-mobile;
     gap: 1rem;
 }
 
 .producto{
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: v.$color-secundario;
     border-radius: 6px;
 
-    h3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    h3{@extend %flex-center;}
 
-    p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    p{@extend %flex-center;}
 
     &:hover{
         transform: translateY(-5px);
@@ -38,7 +28,7 @@
 
 @media (min-width: 768px){
     .contenedor-productos{
-        grid-template-columns: repeat(2, 1fr);
+        @include m.grid(2, 1fr);
         grid-template-areas: 
             "producto1 producto2";
         gap: 1rem;
@@ -55,7 +45,7 @@
 
 @media (min-width: 1024px){
     .contenedor-productos{
-        grid-template-columns: repeat(2, 1fr);
+        @include m.grid(2, 1fr);
         grid-template-areas: 
             "producto1 producto2";
         gap: 1rem;

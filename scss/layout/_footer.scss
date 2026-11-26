@@ -1,9 +1,8 @@
 @use "../utilities/variables" as v;
+@use "../utilities/mixins";
 
 footer{
     background-color: v.$color-secundario;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     padding: 5px;
 }

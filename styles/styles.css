@@ -66,11 +66,19 @@ body main section figure {
   background-color: rgba(245, 198, 110, 0.8784313725);
 }
 
-footer {
-  background-color: rgba(245, 198, 110, 0.8784313725);
+.grid-contacto, .contenedor-productos, .grid-pag-principal {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.producto, .producto h3, .producto p, footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  background-color: rgba(245, 198, 110, 0.8784313725);
   padding: 5px;
 }
 
@@ -83,13 +91,12 @@ footer {
 }
 
 .grid-pag-principal {
-  display: grid;
-  grid-template-columns: 1fr;
   grid-template-areas: "h2" "ul" "carousel";
 }
 
 @media (min-width: 768px) {
   .grid-pag-principal {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: "h2 carousel" "ul carousel" "ul carousel" "ul carousel" "ul carousel" "ul carousel";
@@ -100,28 +107,13 @@ footer {
 }
 
 .contenedor-productos {
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 .producto {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(245, 198, 110, 0.8784313725);
   border-radius: 6px;
-}
-.producto h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.producto p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .producto:hover {
   transform: translateY(-5px);
@@ -130,6 +122,7 @@ footer {
 
 @media (min-width: 768px) {
   .contenedor-productos {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "producto1 producto2";
     gap: 1rem;
@@ -143,6 +136,7 @@ footer {
 }
 @media (min-width: 1024px) {
   .contenedor-productos {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "producto1 producto2";
     gap: 1rem;
@@ -165,8 +159,6 @@ footer {
 }
 
 .grid-contacto {
-  display: grid;
-  grid-template-columns: 1fr;
   grid-template-areas: "ul" "figure";
 }
 

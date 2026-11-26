@@ -1,3 +1,5 @@
+@use "../utilities/mixins" as m;
+
 .carousel.slide{
     grid-area: carousel;
 
@@ -8,8 +10,7 @@
 }
 
 .grid-pag-principal{
-    display: grid;
-    grid-template-columns: 1fr;
+    @extend %grid-mobile;
     grid-template-areas: 
         "h2"
         "ul"
@@ -18,7 +19,7 @@
 
 @media (min-width: 768px){
     .grid-pag-principal{
-        grid-template-columns: repeat(2, 1fr);
+        @include m.grid(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas: 
             "h2 carousel"
